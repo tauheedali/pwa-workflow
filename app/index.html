@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Form App</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="src/themes/balanced-body.min.css"/>
+    <link rel="stylesheet" href="src/themes/jquery.mobile.icons.min.css"/>
+    <link rel="apple-touch-icon" href="src/images/icons/icon-168.png">
+    <!--<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">-->
+    <link href="src/images/splashscreens/iphone5_splash.png"
+          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/iphone6_splash.png"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/iphoneplus_splash.png"
+          media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/iphonex_splash.png"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/iphonexr_splash.png"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/iphonexsmax_splash.png"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/ipad_splash.png"
+          media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/ipadpro1_splash.png"
+          media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/ipadpro3_splash.png"
+          media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <link href="src/images/splashscreens/ipadpro2_splash.png"
+          media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<style>
+    body {
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    #lead-capture div.ui-input-text {
+        margin-bottom: 2vh;
+    }
+
+    form {
+        padding: 1vh 5vw;
+        background: #fff;
+    }
+</style>
+<body class="ui-body-a" ontouchstart="">
+<div style="text-align: center">
+    <img src="src/images/icons/icon-168.png"/>
+</div>
+<div id="lead-capture">
+    <script type="text/template" id="lead">
+        <form class="">
+            <div>
+                <fieldset class="ui-controlgroup">
+                    <div role="heading" class="ui-controlgroup-label">
+                        <legend>Tell us about a little about yourself:</legend>
+                    </div>
+                    <div>
+                        <input type="text" name="name" class="ui-input-text" id="name" placeholder="Name"/>
+                    </div>
+                    <div>
+                        <input type="email" name="email" class="ui-input-text" id="email" placeholder="Email"/>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" class="ui-input-text" id="phone" placeholder="Phone"/>
+                    </div>
+                    <div>
+                        <input type="text" name="zip" class="ui-input-text" id="zip" placeholder="Zip"/>
+                    </div>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-horizontal ui-corner-all">
+                    <div role="heading" class="ui-controlgroup-label">
+                        <legend>Have you used meal prep services before?</legend>
+                    </div>
+                    <div class="ui-controlgroup-controls ">
+                        <div class="ui-radio">
+                            <label for="radio-choice-a1"
+                                   class="ui-btn ui-corner-all ui-btn-inherit ui-first-child ui-btn-active ui-radio-on">Yes</label>
+                            <input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="Y">
+                        </div>
+                        <div class="ui-radio">
+                            <label for="radio-choice-b1" class="ui-btn ui-corner-all ui-btn-inherit ui-last-child ui-radio-off">No</label>
+                            <input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="N" checked="checked">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="subscribe">Subscribe for texts and emails</label>
+                    <div class="ui-checkbox">
+                        <input type="checkbox" name="subscribe" id="subscribe" value="Y" checked/>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <button type="submit" class="ui-btn ui-btn-active ui-btn-corner-all">Submit</button>
+                </fieldset>
+            </div>
+        </form>
+    </script>
+</div>
+</body>
+<script src="dist/js/main.bundle.js"></script>
+</html>

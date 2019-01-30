@@ -1,0 +1,6 @@
+# PHP Storm project files #
+.idea/
+# Node files #
+node_modules
+app/package-lock.json
+
