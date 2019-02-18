@@ -1,15 +1,21 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-    watch: true,
-    context: __dirname,
-    entry: {
-        main: './src/index.js',
-        //builder: './src/js/builder.js'
-    },
     output: {
-        path: path.resolve(__dirname, 'dist/js'),
-        filename: '[name].bundle.js'
+        filename: 'bundle.js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: [
+                        ['latest', {modules: false}],
+                    ],
+                },
+            },
+        ],
     },
 };

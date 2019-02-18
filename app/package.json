@@ -6,30 +6,40 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start-dev": "gulp watch"
+    "start-dev": "gulp watch",
+    "connect": "gulp connect"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.5",
     "babel-preset-es2015": "^6.24.1",
-    "backbone": "^1.3.3",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
     "lodash": "^4.17.11",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-latest": "^6.24.1",
     "css-loader": "^2.1.0",
-    "gulp": "^4.0.0",
+    "gulp": "github:gulpjs/gulp",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-stream": "^5.2.1"
   }
 }
